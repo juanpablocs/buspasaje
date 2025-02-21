@@ -41,7 +41,6 @@ public class ClienteService {
         cliente.setApellido(clienteActualizado.getApellido());
         cliente.setTelefono(clienteActualizado.getTelefono());
         cliente.setCorreo(clienteActualizado.getCorreo());
-        cliente.setContrasena(clienteActualizado.getContrasena());
         return clienteRepository.save(cliente);
     }
 
