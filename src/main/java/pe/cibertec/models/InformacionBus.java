@@ -14,12 +14,12 @@ public class InformacionBus {
     private String tipoBus;
     private String origen;
     private String destino;
-    private Integer totalAsientos;
-    private Integer asientosReservados;
-    private Integer asientosDisponibles;
+    private Integer totalAsientos = 0;
+    private Integer asientosReservados = 0;
+    private Integer asientosDisponibles = 0;
     private LocalDateTime horaSalida;
     private LocalDateTime horaLlegada;
-    private Integer tarifa;
+    private Integer tarifa = 0;
 
     public InformacionBus() {
     }

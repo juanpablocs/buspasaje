@@ -15,4 +15,5 @@ public class MainConfig {
         registrationBean.addUrlPatterns("/*"); // Aplicar a todas las rutas
         return registrationBean;
     }
+
 }

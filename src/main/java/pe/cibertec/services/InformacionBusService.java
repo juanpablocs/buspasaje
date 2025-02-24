@@ -38,7 +38,7 @@ public class InformacionBusService {
         bus.setDestino(busActualizado.getDestino());
         bus.setTotalAsientos(busActualizado.getTotalAsientos());
         bus.setAsientosReservados(busActualizado.getAsientosReservados());
-        bus.setAsientosDisponibles(busActualizado.getAsientosDisponibles());
+        bus.setAsientosDisponibles(busActualizado.getAsientosDisponibles() > 0 ? bus.getAsientosDisponibles() : bus.getTotalAsientos() - bus.getAsientosReservados());
         bus.setHoraSalida(busActualizado.getHoraSalida());
         bus.setHoraLlegada(busActualizado.getHoraLlegada());
         bus.setTarifa(busActualizado.getTarifa());

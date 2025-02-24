@@ -1,6 +1,8 @@
 package pe.cibertec.models;
 
 import jakarta.persistence.*;
+import pe.cibertec.enums.EstadoReserva;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,13 +23,16 @@ public class Reserva {
 
     private LocalDateTime fechaReserva;
     private LocalDateTime salida;
-    private Integer totalBoletos;
-    private Integer tarifaTotal;
-    private Boolean estado;
+    private Integer totalBoletos = 0;
+    private Integer tarifaTotal = 0;
+
+    @Enumerated(EnumType.STRING)
+    private EstadoReserva estado = EstadoReserva.EN_RESERVA; // Estado por defecto
 
     public Reserva() {
     }
 
+    // Getters y Setters
     public Integer getNumeroReserva() {
         return numeroReserva;
     }
@@ -84,13 +89,11 @@ public class Reserva {
         this.tarifaTotal = tarifaTotal;
     }
 
-    public Boolean getEstado() {
+    public EstadoReserva getEstado() {
         return estado;
     }
 
-    public void setEstado(Boolean estado) {
+    public void setEstado(EstadoReserva estado) {
         this.estado = estado;
     }
-
-    // Getters y Setters
 }
